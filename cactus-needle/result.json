@@ -1,0 +1,15 @@
+{
+  "type": "respond",
+  "success": true,
+  "error": null,
+  "error_code": null,
+  "reason": null,
+  "function_calls": [],
+  "suppressed_calls": [],
+  "reasoning": "User asked a question -> respond with the temperature from result.",
+  "confidence": 0.6948,
+  "prefill_tps": 719.3,
+  "decode_tps": 180.0,
+  "peak_ram_mb": 98.4,
+  "results": [{ "city": "Tehran", "temperature": 27, "condition": "clear" }]
+}
