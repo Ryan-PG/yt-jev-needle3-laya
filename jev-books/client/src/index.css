@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+/* Keyboard focus stays visible; pointer clicks stay quiet. */
+:focus-visible {
+  @apply outline-none ring-2 ring-slate-900 ring-offset-2 ring-offset-slate-50 dark:ring-slate-100 dark:ring-offset-slate-950;
+}

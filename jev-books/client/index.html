@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Classification Benchmark</title>
+    <script>
+      // Applied before first paint so the theme never flashes. Kept out of the
+      // bundle because it must run before the app (and React) loads.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem('book-benchmark-theme');
+          var preference = stored === 'light' || stored === 'dark' ? stored : 'system';
+          var dark =
+            preference === 'dark' ||
+            (preference === 'system' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', dark);
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (error) {
+          /* No stored preference and no matchMedia: stay on the light theme. */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
