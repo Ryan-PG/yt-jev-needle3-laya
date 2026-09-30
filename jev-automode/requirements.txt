@@ -1,0 +1,4 @@
+langchain
+langchain-openai
+langchain-typesafe[experimental]
+python-dotenv
