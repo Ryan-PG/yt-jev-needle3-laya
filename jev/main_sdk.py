@@ -1,4 +1,3 @@
-```python
 import os
 
 from dotenv import load_dotenv
@@ -54,4 +53,3 @@ print("\nResults:")
 print("Department:", response.answers["department"].choice)
 print("Frustration:", response.answers["frustration"].score)
 print("Urgent:", response.answers["is_urgent"].noul)
-```
