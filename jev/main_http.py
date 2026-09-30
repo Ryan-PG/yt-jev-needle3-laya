@@ -1,7 +1,14 @@
 import os
-import requests
 
-API_KEY = os.environ["TYPESAFE_API_KEY"]
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.getenv("TYPESAFE_API_KEY")
+
+if not api_key:
+    raise RuntimeError("TYPESAFE_API_KEY is not set in .env")
 
 url = "https://api.typesafe.ai/v1/systemone"
 
@@ -43,7 +50,7 @@ payload = {
 response = requests.post(
     url,
     headers={
-        "Authorization": f"Bearer {API_KEY}",
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     },
     json=payload,

@@ -1,3 +1,5 @@
 typesafe-sdk
 
 requests
+
+python-dotenv
